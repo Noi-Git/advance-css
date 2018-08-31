@@ -1,180 +1,126 @@
-/*
-dark-blue: #254351;
-light-blue: #688ab0;
-gray: #c6c9ce;
-light-brown: #d2b7a4;
-orange: #ffd08c;
-font-family: 'Nanum Myeongjo', serif;
-*/
-
-
-
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-/* ==== set up font-size to support the use of rem ==== */
-/* 
-    - first set up all html element to 10px
-    - then chenge all font-size and all px to rem accordingly
-*/
-
-/* === use inherit for the box-sizing === */
-/*
-    - first move the box-sizing --> to body
-    - second set that box-sizing in * --> to box-sizing: inherit;
-*/
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 html {
-    /* font-size: 10px; */ 
-    /* this still be a problem because it will override the user font-size setting*/
-    /* we use the one below instant --> but need some calculation */
-    font-size: 62.5%;
-}
-
+  font-size: 62.5%; }
 
 body {
-    font-family: 'Muli', sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.7;
-    color: #444;
-    padding: 3rem; /*set padding arround the webpage*/
-
-    box-sizing: border-box;
-}
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #444;
+  padding: 3rem;
+  /*set padding arround the webpage*/
+  box-sizing: border-box; }
 
 .header {
-    height: 95vh;
-    background-image: linear-gradient(rgba(198, 201, 206, 0.5), 
-    rgba(210, 183, 164, 0.6)), url(../img/love.jpg);
-    /* background-image: linear-gradient(to right bottom, #c6c9ce, #d2b7a4), url(../img/love.jpg); */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-
-    /* clip-path: polygon(x y, x y, x y, x y); */
-    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-}
-
-/* set the logo-box to position absolute --> set parent element header to position relative */
-.header__logo-box {
+  height: 95vh;
+  background-image: linear-gradient(rgba(198, 201, 206, 0.5), rgba(210, 183, 164, 0.6)), url(../img/love.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  .header__logo-box {
     position: absolute;
     top: 4rem;
-    left: 4rem;
-}
-
-.header__logo {
-    width: 4rem;
-}
-
-/* style heading --> set both main and sub as display block*/
-.header__header-box {
+    left: 4rem; }
+  .header__logo {
+    width: 8rem; }
+  .header__header-box {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%); /*to bring the whole header-box to the center*/
-
-    text-align: center; /*to set the btn button to the center of the whole header-box*/
-}
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*to set the btn button to the center of the whole header-box*/ }
 
 .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-    backface-visibility: hidden; /*to prevent animation from shaking*/
-
-    margin-bottom: 6rem; /* to give the margin for some spacing of the box underneath */
-}
-.heading-primary--main {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  /*to prevent animation from shaking*/
+  margin-bottom: 6rem;
+  /* to give the margin for some spacing of the box underneath */ }
+  .heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
-
+    text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
     animation-name: moveInLeft;
-    animation-duration: 1.5s;
-
-    /*
-    animation-delay: 1.5s;
-    animation-iteration-count: 3;
-    animation-timing-function: ease-out;
-    */
-}
-
-.heading-primary--sub {
+    animation-duration: 1.5s; }
+  .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 1.7rem;
-
     animation-name: moveInRight;
-    animation-duration: 1.5s;
-    /*animation: moveInRight 1s ease-out;*/
-}
+    animation-duration: 1.5s; }
 
 /* === animate the header-box === */
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem)
-    }
-
-    80% {
-        opacity: 1;
-        transform: translateX(2rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    opacity: 1;
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 @keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem)
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    opacity: 1;
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-    80% {
-        opacity: 1;
-        transform: translateX(-2rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+@keyframes moveTop {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  80% {
+    opacity: 1;
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /* === button === */
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    font-size: 1.6rem;
-    display: inline-block; /*do this for the padding*/
-    border-radius: 10rem;
-    transition: all .2s;
-}
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  font-size: 1.6rem;
+  display: inline-block;
+  /*do this for the padding*/
+  border-radius: 10rem;
+  transition: all .2s; }
 
 .btn:hover {
-    transform: translateY(-3px);
-    /* box-shadow: x y blur color); */
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-}
+  transform: translateY(-3px);
+  /* box-shadow: x y blur color); */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-}
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #777;
-}
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #777; }
+
+.btn--animated {
+  animation-name: moveTop;
+  animation-duration: 2.5s; }
