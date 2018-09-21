@@ -1,0 +1,34 @@
+/* === BUTTONS === */
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        font-size: 1.6rem;
+        display: inline-block; /*do this for the padding*/
+        border-radius: 10rem;
+        transition: all .2s;
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        /* box-shadow: x y blur color); */
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+    
+    &--white {
+        background-color: rgba($color-white, 0.8);
+        color: $color-semi-black;
+    }
+    
+    &--animated {
+        animation-name: moveTop;
+        animation-duration: 2.5s;
+    }
+}

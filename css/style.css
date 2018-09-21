@@ -1,3 +1,5 @@
+/* === VARIABLES === */
+/* === BASE === */
 *,
 *::after,
 *::before {
@@ -9,61 +11,9 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Muli', sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #444;
-  padding: 3rem;
-  /*set padding arround the webpage*/
   box-sizing: border-box; }
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(rgba(198, 201, 206, 0.5), rgba(210, 183, 164, 0.6)), url(../img/love.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    width: 8rem; }
-  .header__header-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    /*to set the btn button to the center of the whole header-box*/ }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
-  backface-visibility: hidden;
-  /*to prevent animation from shaking*/
-  margin-bottom: 6rem;
-  /* to give the margin for some spacing of the box underneath */ }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
-    animation-name: moveInLeft;
-    animation-duration: 1.5s; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 1.7rem;
-    animation-name: moveInRight;
-    animation-duration: 1.5s; }
-
-/* === animate the header-box === */
+/* === ANIMATIONS === */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -97,7 +47,41 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-/* === button === */
+/* === TYPOGRAPHY === */
+body {
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #444;
+  padding: 3rem;
+  /*set padding arround the webpage*/ }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  /*to prevent animation from shaking*/
+  margin-bottom: 6rem;
+  /* to give the margin for some spacing of the box underneath */ }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+    animation-name: moveInLeft;
+    animation-duration: 1.5s; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1.7rem;
+    animation-name: moveInRight;
+    animation-duration: 1.5s; }
+
+/* === BUTTONS === */
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -124,3 +108,31 @@ body {
 .btn--animated {
   animation-name: moveTop;
   animation-duration: 2.5s; }
+
+/* === HEADER=== */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(rgba(198, 201, 206, 0.5), rgba(210, 183, 164, 0.6)), url(../img/love.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    width: 8rem; }
+  .header__header-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*to set the btn button to the center of the whole header-box*/ }
+
+/* === GIRD ===*/
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }

@@ -1,0 +1,18 @@
+/* === BASE === */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //defines what 1 rem is
+}
+
+
+body {  //seperate the less of the body to typography
+    box-sizing: border-box;
+}
