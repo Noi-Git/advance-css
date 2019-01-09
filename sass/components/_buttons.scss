@@ -26,6 +26,11 @@
         background-color: rgba($color-white, 0.8);
         color: $color-semi-black;
     }
+
+    &--orange {
+        background-color: rgba($color-orange, 0.8);
+        color: $color-white;
+    }
     
     &--animated {
         animation-name: moveTop;
