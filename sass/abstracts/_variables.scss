@@ -15,6 +15,7 @@ $color-yellow: #ffdf04;
 
 $color-gray: #c6c9ce;
 $color-gray-light-1: #f7f7f7;
+$color-gray-light-2: #eeeeee;
 
 $color-white: #fff;
 $color-yellow-white: #f3f0c7;
@@ -23,7 +24,28 @@ $color-semi-black: #777;
 $color-black: #000;
 $color-text: #555;
 
+// =========================
+
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+// =========================
+
 $font-family: 'Nanum Myeongjo', serif;
+
+//FONT
+$default-font-size: 1.6rem;
+
+// =========================
 
 $text-shadow-black: .2rem .2rem .4rem rgba($color-black,.2);
 $text-shadow-orange: .2rem .2rem .4rem rgba($color-orange,.2);
@@ -32,8 +54,7 @@ $box-shadow-normal: 0 2.5rem 4rem rgba($color-black,.5);
 $box-shadow-medium: 0 1.5rem 4rem rgba($color-black, .4);
 $box-shadow-small: 0 1.5rem 4rem rgba($color-black, .15);
 
-//FONT
-$default-font-size: 1.6rem;
+// =========================
 
 // GRID
 $grid-width: 114rem;
