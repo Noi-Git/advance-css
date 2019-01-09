@@ -3,7 +3,7 @@
 body {
     font-family: 'Muli', sans-serif;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     line-height: 1.7;
     color: $color-text;
     padding: 3rem; /*set padding arround the webpage*/
@@ -12,7 +12,7 @@ body {
 .heading-primary {
     color: $color-white;
     text-transform: uppercase;
-    text-shadow: .2rem .2rem .4rem rgba($color-black,.2);
+    text-shadow: $text-shadow-black;
     backface-visibility: hidden; /*to prevent animation from shaking*/
     margin-bottom: 6rem; /* to give the margin for some spacing of the box underneath */
 
@@ -21,7 +21,7 @@ body {
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
-        text-shadow: .2rem .2rem .4rem rgba($color-black,.2);
+        text-shadow: $text-shadow-black;
     
         animation-name: moveInLeft;
         animation-duration: 1.5s;
@@ -35,5 +35,35 @@ body {
     
         animation-name: moveInRight;
         animation-duration: 1.5s;
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5 rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-shadow: $text-shadow-orange;
+
+    //clip background-color to text
+    background-image: linear-gradient(to right, $color-yellow, $color-orange);
+    -webkit-background-clip: text;
+    background-clip: text;   
+    //make text transparent for the color to sit on top
+    color: transparent;
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
     }
 }

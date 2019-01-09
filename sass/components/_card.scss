@@ -1,0 +1,37 @@
+.card {
+  perspective: 150rem;
+  -moz-persective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    background-color: $color-green-dark;
+    color: $color-white;
+
+    height: 50rem;
+    transition: all .8s;
+    //put two cards on top of each other
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+
+    &--front {
+      background-color: $color-green-dark;
+    }
+
+    &--back {
+      background-color: $color-orange;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {  //we want the card to tranform when we hover the card
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {  //we want the card to tranform when we hover the card
+    transform: rotateY(0);
+  }
+}

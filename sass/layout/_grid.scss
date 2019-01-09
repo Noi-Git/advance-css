@@ -2,7 +2,6 @@
 
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto;
 
     //&:last-child means .row:last-child() ==> but we are going to use "not" 
@@ -48,7 +47,6 @@
     @include clearfix;
 
     [class^="col-"] { 
-        background-color: $orange;
         float: left;
 
         &:not(:last-child) {

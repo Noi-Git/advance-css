@@ -1,19 +1,39 @@
 /* === VARIABLES === */
 
 // COLORS
-$dark-blue: #254351;
-$light-blue: #688ab0;
-$gray: #c6c9ce;
-$light-brown: #d2b7a4;
-$orange: #ffd08c;
+$color-dark-blue: #254351;
+$color-light-blue: #688ab0;
+
+$color-green-light: #8bba96;
+$color-green-dark: #005b70;
+
+
+$color-light-brown: #d2b7a4;
+
+$color-orange: #f79d00;
+$color-yellow: #ffdf04;
+
+$color-gray: #c6c9ce;
+$color-gray-light-1: #f7f7f7;
 
 $color-white: #fff;
+$color-yellow-white: #f3f0c7;
+
 $color-semi-black: #777;
 $color-black: #000;
-$color-text: #444;
+$color-text: #555;
 
 $font-family: 'Nanum Myeongjo', serif;
 
+$text-shadow-black: .2rem .2rem .4rem rgba($color-black,.2);
+$text-shadow-orange: .2rem .2rem .4rem rgba($color-orange,.2);
+
+$box-shadow-normal: 0 2.5rem 4rem rgba($color-black,.5);
+$box-shadow-medium: 0 1.5rem 4rem rgba($color-black, .4);
+$box-shadow-small: 0 1.5rem 4rem rgba($color-black, .15);
+
+//FONT
+$default-font-size: 1.6rem;
 
 // GRID
 $grid-width: 114rem;
