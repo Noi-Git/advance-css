@@ -1,0 +1,70 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: $box-shadow-small;
+  background-color: rgba($color-white, .6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+
+    // create a circle shape for the text to float around the outsid of the circle
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+
+    position: relative;
+  } 
+
+  &__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .5s;
+    backface-visibility: hidden;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 1.7rem;
+    text-align: center;
+
+    //move the text down and hide it before hover
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; //to fix the shaking when hover
+  }
+
+  //setup the hover effect -- the text will show and move up when hover
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+}

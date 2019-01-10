@@ -10,8 +10,11 @@ $color-green-dark: #005b70;
 
 $color-light-brown: #d2b7a4;
 
-$color-orange: #f79d00;
+$color-orange: #e69304;
 $color-yellow: #ffdf04;
+$color-orange-button: #ee6306;
+$color-orange-heading: #eb6004;
+$color-yellow-heading: #83c508;
 
 $color-gray: #c6c9ce;
 $color-gray-light-1: #f7f7f7;
@@ -21,7 +24,8 @@ $color-white: #fff;
 $color-yellow-white: #f3f0c7;
 
 $color-semi-black: #777;
-$color-black: #000;
+$color-black: #000000;
+$color-footer: #312f2f;
 $color-text: #555;
 
 // ========== CARD COLORS ============
@@ -48,7 +52,7 @@ $default-font-size: 1.6rem;
 // =========================
 
 $text-shadow-black: .2rem .2rem .4rem rgba($color-black,.2);
-$text-shadow-orange: .2rem .2rem .4rem rgba($color-orange,.2);
+$text-shadow-orange: .2rem .2rem .4rem rgba($color-orange-heading,.2);
 
 $box-shadow-normal: 0 2.5rem 4rem rgba($color-black,.5);
 $box-shadow-medium: 0 1.5rem 4rem rgba($color-black, .4);

@@ -47,7 +47,7 @@ body {
     text-shadow: $text-shadow-orange;
 
     //clip background-color to text
-    background-image: linear-gradient(to right, $color-yellow, $color-orange);
+    background-image: linear-gradient(to right, $color-yellow-heading, $color-orange-heading);
     -webkit-background-clip: text;
     background-clip: text;   
     //make text transparent for the color to sit on top
