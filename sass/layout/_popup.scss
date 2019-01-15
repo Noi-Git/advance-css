@@ -7,12 +7,22 @@
   background-color: rgba($color-footer, .9);
   z-index: 3000;
 
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+
   &__content {
     @include absCenter;
     width: 75%;
     background-color: $color-white;
     box-shadow: $box-shadow-medium;
     display: table; // use "table" and "table-cell" to give the elements the same height
+    overflow: hidden; // to get the rounded corner back
+
+    //scale the popup
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.5); //we need to put translate here to make it works
+    transition: all .4s;
   }
 
   &__left {
@@ -24,6 +34,8 @@
   &__right {
     width: 66.66666%;
     display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
     // float: left; // make text and image lay side by side each other
   }
 
@@ -33,6 +45,47 @@
   }
 
   &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
 
+    //create two column text
+    column-count: 2;
+    column-gap: 4rem; //1 em = 14px;
+    column-rule: 1px solid $color-gray-light-2;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+    //== open stage ==
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); //we need to put translate here to make it works
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-text;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      line-height: 1;
+      text-decoration: none;
+      display: inline-block;
+      transition: all .2s;
+    }
+
+    &:hover {
+      color: $color-orange;
+    }
   }
 }

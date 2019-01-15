@@ -48,6 +48,7 @@
 
         opacity: 0; //to make navigation disapear. Also set width to 0
         width: 0; // chenge width to 0 which is getting rid of the navigation
+        visibility: hidden;
       // width: 100vw;
   }
 
@@ -102,6 +103,7 @@
     &__checkbox:checked ~ &__nav {
         opacity: 1;
         width: 100%;
+        visibility: visible;
     }
 
     //ICON
