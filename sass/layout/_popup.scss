@@ -1,0 +1,38 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-footer, .9);
+  z-index: 3000;
+
+  &__content {
+    @include absCenter;
+    width: 75%;
+    background-color: $color-white;
+    box-shadow: $box-shadow-medium;
+    display: table; // use "table" and "table-cell" to give the elements the same height
+  }
+
+  &__left {
+    width: 33.33333%;
+    display: table-cell;
+    // float: left; // make text and image lay side by side each other
+  }
+
+  &__right {
+    width: 66.66666%;
+    display: table-cell;
+    // float: left; // make text and image lay side by side each other
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__text {
+
+  }
+}
