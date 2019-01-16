@@ -7,6 +7,10 @@
   box-shadow: $box-shadow-small;
   transition: transform .3s;
   height: 32rem;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
   
 
   &__icon {
@@ -18,6 +22,10 @@
     background-clip: text;   
     //make text transparent for the color to sit on top
     color: transparent;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 
   &:hover {
