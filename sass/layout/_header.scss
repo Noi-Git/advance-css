@@ -1,6 +1,6 @@
 /* === HEADER=== */
 .header {
-    height: 95vh;
+    height: 85vh;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-orange, 0.8),
@@ -9,10 +9,20 @@
     background-size: cover;
     background-position: top;
     position: relative;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    // clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    // height: 95vh;
+
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        height: 95vh;
+    }
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
         background-image: linear-gradient(
         to right bottom,
         rgba($color-orange, 0.8),
@@ -20,7 +30,8 @@
     url(../img/love-small-hi-dpi.jpg);
     }
 
-    @media (min-resolution: 192dpi) and (min-width: 56.25em) { //the resolution is higher than 192dpi + the width of the screen is larger than 600px
+    @media (min-resolution: 192dpi) and (min-width: 56.25em), 
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 56.25em) { //the resolution is higher than 192dpi + the width of the screen is larger than 600px
         background-image: linear-gradient(
         to right bottom,
         rgba($color-orange, 0.8),
@@ -29,7 +40,9 @@
     background-position: left;
     }
 
-    @media (min-resolution: 192dpi) and (min-width: 75em), (min-width: 125em) { 
+    @media (min-resolution: 192dpi) and (min-width: 75em), 
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), 
+           (min-width: 125em) { 
         background-image: linear-gradient(
         to right bottom,
         rgba($color-orange, 0.8),
@@ -39,7 +52,8 @@
     }
 
 
-    @media (min-resolution: 72dpi) and (min-width: 37.5em){ //the resolution is higher than 72dpi but less than 192dpi + the width of the screen is larger than 600px
+    @media (min-resolution: 72dpi) and (min-width: 37.5em),
+           (-webkit-min-device-pixel-ratio: 1) and (min-width: 37.5em){ //the resolution is higher than 72dpi but less than 192dpi + the width of the screen is larger than 600px
         background-image: linear-gradient(
         to right bottom,
         rgba($color-orange, 0.8),
@@ -47,7 +61,8 @@
     url(../img/love-small.jpg);
     }
 
-    @media (min-resolution: 72dpi) and (min-width: 56.25em){
+    @media (min-resolution: 72dpi) and (min-width: 56.25em),
+           (-webkit-min-device-pixel-ratio: 1) and (min-width: 56.25em){
         background-image: linear-gradient(
         to right bottom,
         rgba($color-orange, 0.8),
@@ -56,7 +71,9 @@
     background-position: left;
     }
 
-    @media (min-resolution: 72dpi) and (min-width: 75em), (min-width: 125em) {
+    @media (min-resolution: 72dpi) and (min-width: 75em),
+           (-webkit-min-device-pixel-ratio: 1) and (min-width: 75em), 
+           (min-width: 125em) {
         background-image: linear-gradient(
         to right bottom,
         rgba($color-orange, 0.8),
