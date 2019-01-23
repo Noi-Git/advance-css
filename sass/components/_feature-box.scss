@@ -10,8 +10,8 @@
 
   @include respond(tab-port) {
     padding: 2rem;
+    height: 23rem;
   }
-  
 
   &__icon {
     font-size: 6rem;

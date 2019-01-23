@@ -72,7 +72,7 @@
 
   <main>
     <section class="section-about">
-      <div class="u-center-text u-margin-bottom-big u-margin-top-big">
+      <div class="u-center-text u-margin-bottom-big u-margin-top-big ">
           <h2 class="heading-secondary">
             Exciting tour for adventurous people
           </h2>
@@ -87,7 +87,7 @@
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime facilis, 
             repellat dignissimos corporis dolore sed ducimus aperiam iste. Vero nam est 
             quos assumenda ipsum praesentium fuga, error hic corrupti incidunt!
-          </p>
+          </p>     
 
           <h3 class="heading-tertiary u-margin-bottom-small">
               Live adventure like you never have before
@@ -102,9 +102,22 @@
         </div>
         <div class="col-1-of-2">
           <div class="composition">
-            <img src="img/nat-1-large.jpg" alt="photo 1" class="composition__photo composition__photo--p1">
+
+            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
+                size="(max-width: 56.25em) 20vw, (max-width: 37.5em)) 30vw, 300px" alt="photo 1" class="composition__photo composition__photo--p1" src="img/nat-1-large.jpg">
+
+            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" 
+                size="(max-width: 56.25em) 20vw, (max-width: 37.5em)) 30vw, 300px" alt="photo 2" 
+                class="composition__photo composition__photo--p2" src="img/nat-2-large.jpg">
+
+            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" 
+                size="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="photo 3" 
+                class="composition__photo composition__photo--p3" src="img/nat-3-large.jpg">
+
+
+            <!-- <img src="img/nat-1-large.jpg" alt="photo 1" class="composition__photo composition__photo--p1">
             <img src="img/nat-2-large.jpg" alt="photo 2" class="composition__photo composition__photo--p2">
-            <img src="img/nat-3-large.jpg" alt="photo 3" class="composition__photo composition__photo--p3">
+            <img src="img/nat-3-large.jpg" alt="photo 3" class="composition__photo composition__photo--p3"> -->
           </div>
         </div>
       </div>
@@ -367,7 +380,12 @@
 
   <footer class="footer">
     <div class="footer__logo-box">
-      <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+
+      <picture class="footer__logo">
+        <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+          <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
+      </picture>
+      
     </div>
 
     <div class="row">
@@ -393,10 +411,24 @@
   <!-- POPUP -->
   <div class="popup" id="popup">
     <div class="popup__content">
-      <div class="popup__left">
-        <img src="img/nat-8.jpg" alt="tour image" class="popup__img">
-        <img src="img/nat-9.jpg" alt="tour image" class="popup__img">
-      </div>
+      <!-- <div class="popup__left"> -->
+        <!-- <img src="img/nat-8.jpg" alt="tour image" class="popup__img">
+        <img src="img/nat-9.jpg" alt="tour image" class="popup__img"> -->
+
+        <picture class="popup__left">
+          <source srcset="img/nat-8-small.jpg 1x, img/nat-8-small-hi-dpi.jpg 2x" media="(max-width: 37.5em)">
+          <img srcset="img/nat-8.jpg 1x, img/nat-8-hi-dpi.jpg 2x" alt="tour image" src="img/nat-8.jpg">
+
+          <source srcset="img/nat-9-small.jpg 1x, img/nat-9-small-hi-dpi.jpg 2x" media="(max-width: 37.5em)">
+          <img srcset="img/nat-9.jpg 1x, img/nat-9-hi-dpi.jpg 2x" alt="tour image" src="img/nat-9.jpg">
+
+        </picture>
+
+
+
+
+
+      <!-- </div> -->
       <div class="popup__right">
         <a href="#section-tours" class="popup__close">&times;</a>
         <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>

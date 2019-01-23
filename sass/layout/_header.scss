@@ -5,12 +5,67 @@
         to right bottom,
         rgba($color-orange, 0.8),
         rgba($color-yellow, 0.8)),
-    url(../img/love.jpg);
+    url(../img/love-small.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-orange, 0.8),
+        rgba($color-yellow, 0.8)),
+    url(../img/love-small-hi-dpi.jpg);
+    }
+
+    @media (min-resolution: 192dpi) and (min-width: 56.25em) { //the resolution is higher than 192dpi + the width of the screen is larger than 600px
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-orange, 0.8),
+        rgba($color-yellow, 0.8)),
+    url(../img/love-medium-hi-dpi.jpg);
+    background-position: left;
+    }
+
+    @media (min-resolution: 192dpi) and (min-width: 75em), (min-width: 125em) { 
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-orange, 0.8),
+        rgba($color-yellow, 0.8)),
+    url(../img/love-hi-dpi.jpg);
+    background-position: center;
+    }
+
+
+    @media (min-resolution: 72dpi) and (min-width: 37.5em){ //the resolution is higher than 72dpi but less than 192dpi + the width of the screen is larger than 600px
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-orange, 0.8),
+        rgba($color-yellow, 0.8)),
+    url(../img/love-small.jpg);
+    }
+
+    @media (min-resolution: 72dpi) and (min-width: 56.25em){
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-orange, 0.8),
+        rgba($color-yellow, 0.8)),
+    url(../img/love-medium.jpg);
+    background-position: left;
+    }
+
+    @media (min-resolution: 72dpi) and (min-width: 75em), (min-width: 125em) {
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-orange, 0.8),
+        rgba($color-yellow, 0.8)),
+    url(../img/love.jpg);
+    background-position: center;
+    }
+
+
 
     @include respond(phone) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
